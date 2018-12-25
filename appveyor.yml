@@ -1,0 +1,54 @@
+version: '{branch}-{build}'
+image: Ubuntu
+install:
+- &2063251921 sh: >-
+    sudo apt-get install -y --no-install-recommends \
+            texlive-base texlive-latex-base texlive-generic-recommended \
+            texlive-fonts-recommended texlive-fonts-extra \
+            texlive-extra-utils texlive-latex-recommended texlive-latex-extra \
+            texinfo lmodern
+build_script:
+- sh: >-
+    latexmk -pdf CV.tex
+notifications:
+- provider: Webhook
+  url:
+    secure: PNJ76pGdkEt/09/qRctvtl/ACv1v3CLdtek2ztjSZYOeV4698e2Cc+NGkq+if6eU+VlnDNK6wVbVXq0biEpZMYx2gvMYx5V6w4PMxQYpuJ93Cc2+NrsN17EGKxY94Wwiao2Mp5sx6DuHg2ayjLVKgdbeSElrEec1zHiu2ZBuYMtYTCrDdbys4nC97YzqoXDV
+  method: POST
+  body: >-
+    {
+      "embeds": [
+        {
+          "title": "Build {{buildId}}",
+          "url": "{{buildUrl}}",
+          "color": {{#passed}}40973{{/passed}}{{^passed}}11672839{{/passed}},
+          "footer": {
+            "icon_url": "{{#passed}}https://i.imgur.com/Rf4g8v6.png{{/passed}}{{^passed}}https://i.imgur.com/QaERwAW.png{{/passed}}",
+            "text": "{{#passed}}Success{{/passed}}{{^passed}}Failure{{/passed}}"
+          },
+          "author": {
+            "name": "{{commitAuthor}}",
+            "url": "https://github.com/{{repositoryName}}/commit/{{commitId}}"
+          },
+          "fields": [
+            {
+              "name": "Commit",
+              "value": "[{{commitMessage}}](https://github.com/{{repositoryName}}/commit/{{commitId}})"
+            },
+            {
+              "name": "Duration",
+              "value": "{{duration}}",
+              "inline": true
+            },
+            {
+              "name": "Build version",
+              "value": "{{buildVersion}}",
+              "inline": true
+            }
+          ]
+        }
+      ]
+    }
+  on_build_success: &791552802 true
+  on_build_failure: true
+  on_build_status_changed: false
