@@ -37,7 +37,7 @@ notifications:
           "fields": [
             {
               "name": "repositoryName",
-              "value": "[{{repositoryName}}](https://github.com/{{repositoryName}}"
+              "value": "[{{repositoryName}}](https://github.com/{{repositoryName}})"
             },
             {
               "name": "Commit",
