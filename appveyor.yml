@@ -2,6 +2,8 @@ version: '{branch}-{build}'
 image: Ubuntu
 install:
 - &2063251921 sh: >-
+    sudo add-apt-repository -y "ppa:texlive-backports/ppa"
+    sudo apt-get update
     sudo apt-get install -y --no-install-recommends \
             texlive-base texlive-latex-base texlive-generic-recommended \
             texlive-fonts-recommended texlive-fonts-extra \
@@ -31,6 +33,10 @@ notifications:
             "url": "https://github.com/{{repositoryName}}/commit/{{commitId}}"
           },
           "fields": [
+            {
+              "name": "repositoryName",
+              "value": "[{{repositoryName}}](https://github.com/{{repositoryName}}"
+            },
             {
               "name": "Commit",
               "value": "[{{commitMessage}}](https://github.com/{{repositoryName}}/commit/{{commitId}})"
