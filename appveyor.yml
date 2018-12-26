@@ -30,10 +30,6 @@ notifications:
             "icon_url": "{{#passed}}https://i.imgur.com/Rf4g8v6.png{{/passed}}{{^passed}}https://i.imgur.com/QaERwAW.png{{/passed}}",
             "text": "{{#passed}}Success{{/passed}}{{^passed}}Failure{{/passed}}"
           },
-          "author": {
-            "name": "{{commitAuthor}}",
-            "url": "https://github.com/{{repositoryName}}/commit/{{commitId}}"
-          },
           "fields": [
             {
               "name": "Repository Name",
@@ -42,6 +38,10 @@ notifications:
             {
               "name": "Commit",
               "value": "[{{commitMessage}}](https://github.com/{{repositoryName}}/commit/{{commitId}})"
+            },
+            {
+              "name": "Author",
+              "value": "{{commitAuthor}}"
             },
             {
               "name": "Duration",
