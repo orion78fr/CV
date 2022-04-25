@@ -17,10 +17,10 @@
 
 \firstname{Guillaume}
 \familyname{Turchini}
-\title{Développeur en systèmes et applications réparties}
+\title{Développeur informatique}
 
-\address{51B rue de la Haye}{78130 Les Mureaux}{}
-%\mobile{06 16 17 37 90}
+\address{51 bis rue de la Haye}{78130 Les Mureaux}{}
+\mobile{06 16 17 37 90}
 \email{guillaume.turchini@gmail.com}
 \extrainfo{29 ans - Permis B}
 
@@ -29,11 +29,32 @@
 \begin{document}
 
 \makecvtitle % Print the CV title
-\vspace*{-0.5cm}
+\vspace*{-.5cm}
 
 %----------------------------------------------------------------------------------------
 
-\section{Expérience professionnelle}
+\section{Expériences professionnelles}
+\vspace{1em}
+
+\cventry{2020 -- 2022}
+        {Réparateur Informatique}
+        {Orion Informatique}{Les Mureaux}{}
+        {
+            \begin{itemize}
+                \item Réparation d'ordinateurs, téléphones et autres appareils électroniques.
+                \item Administration de serveurs sous Linux (serveur mail, site intenet, serveur de jeux vidéos, backup).
+            \end{itemize}
+        }
+
+\vspace{1em}
+
+\cventry{2019 -- 2020}
+        {Programmation backend}
+        {}{Langage : Java}{}
+        {
+            Développement d'un backend cloud pour site internet de planification de voyage en vue d'une levée de fonds.
+        }
+
 \vspace{1em}
 
 \cventry{2016 -- 2019}
@@ -42,11 +63,9 @@
         {
             Amélioration et création de modules au sein de la Data Management Platform.
             \begin{itemize}
-                \item Amélioration de l'ETL.
                 \item Transformations et agrégations distribuées avec mise-à-jour via un bus temps-réel.
                 \item Indexation bitemporelle de données via un coprocesseur HBase.
-                \item Installation et administration de clusters Hadoop (HDP et MapR).
-                \item Amélioration de la couverture des tests unitaires et d'intégration.
+                \item Installation et administration de clusters Hadoop (HDP et MapR) on-premise et cloud.
             \end{itemize}
         }
 
@@ -85,12 +104,7 @@
         {Stage de recherche dans le noyau Linux}
         {LIP6 -- UPMC}{Paris. Langage : C}{}
         {
-            \'Etude d'une anomalie de performance d'écriture sur disque rencontrée dans un sujet de thèse.
-            \begin{itemize}
-                \item\'Etude de la partie mm (memory management) du noyau Linux.
-                \item\'Elaboration de benchmarks pour isoler le problème.
-                \item\'Etude de traces du système d'écriture sur disque.
-            \end{itemize}
+            \'Etude d'une anomalie de performance d'écriture sur disque sous Linux rencontrée dans un sujet de thèse.
         }
 
 \vspace{1em}
@@ -99,11 +113,7 @@
         {Stage de développement}
         {COHERIS}{Suresnes. Langages : Java, JavaScript}{}
         {
-            \begin{itemize}
-                \item Création d'un composant de prise de rendez-vous au sein de Coheris CRM.
-                \item\'Etude de la portabilité de l'application Coheris CRM sous tablette windows 8.
-                \item Développement d'un prototype d'application compagnon CRM sous Android.
-            \end{itemize}
+            Création d'un composant de prise de rendez-vous au sein de Coheris CRM.
         }
 
 \vspace{0.5em}
@@ -129,24 +139,10 @@
         {Classes préparatoires aux grandes écoles - MPSI, PSI\up{*}}
         {Lycée Condorcet}{Paris}{}
         {Option Sciences de l'Ingénieur}
-\cventry{2009--2010}
+\cventry{2010}
         {Baccalauréat Scientifique}
         {Lycée François Villon}{Les Mureaux}{}
         {Mention Bien}
-
-\vspace{2em}
-
-%----------------------------------------------------------------------------------------
-
-\section{Enseignements}
-\vspace{1em}
-
-\cvitem{Janv. -- Mai 2016}
-       {Cours et Travaux pratiques sur python et théorie des graphes -- L1 -- 20 heures}
-\cvitem{Sept. -- Déc. 2015}
-       {Travaux pratiques de PR (Programmation Répartie / POSIX) -- M1 -- 44 heures}
-\cvitem{2010 -- 2015}
-       {Professeur particulier en matières scientifiques niveau lycée}
 
 \vspace{0.5em}
 
@@ -155,41 +151,30 @@
 \section{Compétences}
 \vspace{1em}
 
-\cvitem{Langages favoris}
+\cvitem{Langages de prog.}
        {
             Java,
             C,
             Rust,
-            Scala
-       }
-\cvitem{Autres Langages}
-       {
             Bash,
-            C++,
             Python,
-            R,
-            JavaScript,
             LaTeX
        }
 \cvitem{Systèmes}
        {
             Linux (Arch Linux, Debian, CentOS),
             Windows,
-            Android
+            Android,
+            MacOS
        }
 \cvitem{Outils utilisés}
        {
             IntelliJ,
-            Maven,
             Git,
             Docker,
             Yourkit,
-            Visual Studio Code
-       }
-\cvitem{Modélisation}
-       {
-            UML,
-            Design Patterns
+            Visual Studio Code,
+            Suite Office
        }
 \cvitem{Base de données}
        {
@@ -197,24 +182,9 @@
             (Postgre)SQL,
             Hibernate
        }
-\cvitem{Technologies}
-       {
-            Hadoop (HDP et MapR),
-            Coprocesseur HBase,
-            Lucene,
-            Tomcat,
-            JUnit / TestNG,
-            Spring
-       }
-\cvitem{Algorithmique}
-       {
-            Décision répartie,
-            P2P,
-            Détection de fautes,
-            MapReduce (Spark / Yarn)
-       }
 \cvitem{Intégration continue}
        {
+            Github Actions,
             TeamCity,
             AppVeyor,
             SonarQube,
@@ -238,6 +208,18 @@
 \section{Divers}
 \vspace{0.3em}
 
+\subsection{Enseignements}
+\vspace{1em}
+
+\cvitem{Janv. -- Mai 2016}
+       {Cours et Travaux pratiques sur python et théorie des graphes -- L1 -- 20 heures}
+\cvitem{Sept. -- Déc. 2015}
+       {Travaux pratiques de PR (Programmation Répartie / POSIX) -- M1 -- 44 heures}
+\cvitem{2010 -- 2015}
+       {Professeur particulier en matières scientifiques niveau lycée}
+
+\vspace{0.5em}
+
 \subsection{Publications}
 \vspace{1em}
 
@@ -253,12 +235,12 @@
 \subsection{Activités collaboratives}
 \vspace{1em}
 
+\cvitem{2012-2017}
+       {Installation bénévole de distributions Linux (Install party)}
 \cvitem{Sept. 2015}
        {Participation à l'organisation de la conférence EDCC 2015}
 \cvitem{2014}
        {\textit{Membre de la team} au sein de l'association étudiante AEIP6 (UPMC)}
-\cvitem{2012-2017}
-       {Installation bénévole de distributions Linux (Install party)}
 \cvitem{2012-2013}
        {\textit{Membre actif} au sein de l'association étudiante MIBDE (Université Paris Descartes)}
 
